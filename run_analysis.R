@@ -41,12 +41,12 @@ subjecttrain <- read.table("./UCI HAR Dataset/train/subject_train.txt")
   mergedy$activity     <- activitylabels[mergedy$V1, 2]
   
 ## Request 4: Appropriately labels the data set with descriptive variable names  
-  names(mergedy)       <- c("ID", "Label")
+  names(mergedy)       <- c("ID", "Activity")
   names(mergedsubject) <- "Subject"
   
 ## Request 5: From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject
   mergedall <- cbind(mergedsubject, mergedy, mergedx)
-  labelsall <- c("Subject", "ID", "Label")
+  labelsall <- c("Subject", "ID", "Activity")
   datalabels = setdiff(colnames(mergedall), labelsall)
   
   # Make a final table with the tidy data of all the dataset
