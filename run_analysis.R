@@ -48,9 +48,9 @@ subjecttrain <- read.table("./UCI HAR Dataset/train/subject_train.txt")
   mergedall <- cbind(mergedsubject, mergedy, mergedx)
   labelsall <- c("Subject", "ID", "Label")
   datalabels = setdiff(colnames(mergedall), labelsall)
-  # Make a final table with the tidy data
-  melteddata = gather(mergedall, labelsall, datalabels, na.rm=TRUE)
   
+  # Make a final table with the tidy data of all the dataset
+  melteddata = gather(mergedall, labelsall, datalabels, na.rm=TRUE)
   tidydata = dcast(melteddata, Subject + Label ~ variable, mean)
   
   write.table(tidydata, file = "./tidydata.txt", row.names = FALSE)
