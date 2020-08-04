@@ -28,3 +28,5 @@ Jorge L. Reyes-Ortiz, Alessandro Ghio, Luca Oneto, Davide Anguita. November 2012
   * Load the necesary measurements from _features.txt_
   * Merge the labels into the tables from _activity_labels.txt_
   * Merge all the data into a single tidy dataset
+
+Author: [Cristian Roso](https://github.com/Crawbyte) Date: 04.08.2020
